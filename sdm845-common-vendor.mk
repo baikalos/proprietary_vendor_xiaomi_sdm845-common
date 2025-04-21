@@ -714,7 +714,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/6_version_update_ecc_table.sql \
     vendor/xiaomi/sdm845-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql \
     vendor/xiaomi/sdm845-common/proprietary/vendor/lib/soundfx/libspatialaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libspatialaudio.so \
-    vendor/xiaomi/sdm845-common/proprietary/vendor/lib64/soundfx/libspatialaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libspatialaudio.so
+    vendor/xiaomi/sdm845-common/proprietary/vendor/lib64/soundfx/libspatialaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libspatialaudio.so \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/lib64/deviceInfoServiceModule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/deviceInfoServiceModule.so \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/lib/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspl.so \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/lib64/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspl.so \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/lib64/liblocdiagiface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocdiagiface.so \
 
 
 

@@ -6,3 +6,4 @@ service sensorscal-hal-1-0  /vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@
     class hal
     user system
     group system
+    writepid /dev/cpuset/system-background/tasks

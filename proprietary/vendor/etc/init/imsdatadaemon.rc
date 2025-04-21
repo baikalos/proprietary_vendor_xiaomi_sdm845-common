@@ -10,6 +10,7 @@ service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     socket ims_datad stream 0660 system radio
     group radio wifi inet vendor_qti_diag log
     disabled
+    writepid /dev/cpuset/system-background/tasks
 
 on property:vendor.ims.QMI_DAEMON_STATUS=1
     start vendor.imsdatadaemon
