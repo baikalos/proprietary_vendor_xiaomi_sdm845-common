@@ -10731,6 +10731,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib/libwfdservice.so",
             ],
             shared_libs: [
+                "libaudioclient_shim",
                 "liblog",
                 "libutils",
                 "libcutils",
