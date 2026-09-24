@@ -3756,7 +3756,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqcodec2",
+    name: "libjsoncpp",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -3764,16 +3764,194 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libqcodec2.so",
+                "proprietary/vendor/lib/libjsoncpp.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcodec2_base",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqcodec2_base.so",
             ],
             shared_libs: [
                 "libutils",
                 "libcutils",
                 "liblog",
                 "libcodec2_vndk",
-                "libqdMetaData",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcodec2_basecodec",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqcodec2_basecodec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libcodec2_vndk",
+                "libqcodec2_base",
+                "libqcodec2_utils",
+                "libqcodec2_platform",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcodec2_core",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqcodec2_core.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libcodec2_vndk",
+                "libqcodec2_base",
+                "libqcodec2_utils",
+                "libqcodec2_platform",
+                "libqcodec2_basecodec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcodec2_platform",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqcodec2_platform.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libcodec2_vndk",
+                "libqcodec2_base",
+                "libjsoncpp",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcodec2_utils",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqcodec2_utils.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libcodec2_vndk",
+                "libqcodec2_base",
+                "libqcodec2_platform",
                 "libhidlbase",
                 "android.hardware.graphics.mapper@3.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcodec2_v4l2codec",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqcodec2_v4l2codec.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libqcodec2_base",
+                "libqcodec2_platform",
+                "libqcodec2_utils",
+                "libqcodec2_basecodec",
+                "libcodec2_vndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -13333,7 +13511,12 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service",
             ],
             shared_libs: [
-                "libqcodec2",
+                "libqcodec2_base",
+                "libqcodec2_utils",
+                "libqcodec2_basecodec",
+                "libqcodec2_platform",
+                "libqcodec2_core",
+                "libjsoncpp",
                 "android.hardware.media.c2@1.0",
                 "android.hardware.media.omx@1.0",
                 "liblog",
