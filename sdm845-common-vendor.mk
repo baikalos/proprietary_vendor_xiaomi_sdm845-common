@@ -135,11 +135,13 @@ PRODUCT_PACKAGES += \
     libGLESv2_adreno \
     libq3dtools_adreno \
     libq3dtools_esx \
+    libVkLayer_ADRENO_qprofiler \
     vulkan.adreno \
     libC2D2 \
     libCB \
     libOpenCL \
     libVkLayer_q3dtools \
+    libadreno_app_profiles \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
@@ -153,7 +155,10 @@ PRODUCT_PACKAGES += \
     libgpudataproducer \
     libgsl \
     libidl \
+    libkcl \
+    libkernelmanager \
     libllvm-glnext \
+    libllvm-qgl \
     libllvm-qcom \
     libmdmdetect \
     libmdsprpc \
