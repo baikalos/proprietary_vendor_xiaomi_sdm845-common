@@ -335,6 +335,7 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "both",
     relative_install_path: "egl",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -596,6 +597,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libgsl",
+                "liblog",
+                "libnativewindow",
                 "libc++",
                 "libc",
                 "libm",
@@ -608,6 +611,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libgsl",
+                "liblog",
+                "libnativewindow",
                 "libc++",
                 "libc",
                 "libm",
@@ -616,6 +621,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -632,6 +638,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libadreno_app_profiles.so",
             ],
             shared_libs: [
+                "android.hidl.memory@1.0",
                 "libcutils",
                 "libhardware",
                 "libutils",
@@ -650,6 +657,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libadreno_app_profiles.so",
             ],
             shared_libs: [
+                "android.hidl.memory@1.0",
                 "libcutils",
                 "libhardware",
                 "libutils",
@@ -665,6 +673,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -1176,6 +1185,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -1211,6 +1221,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -1250,6 +1261,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -1289,6 +1301,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
