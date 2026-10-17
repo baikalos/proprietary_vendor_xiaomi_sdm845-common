@@ -1,15 +1,8 @@
 {
-    "Video": {
-        "Presets": {
-            "dec_linear_color_format": 0,
-            "enc_linear_color_format": 1,
-            "enc_default_bframe_count": 0,
-            "enc_max_mbs_per_sec": 2073600
-        },
-        "Features": {
-            "enc_cvp_enable": 0,
-            "enc_vpss_flip": 1,
-            "output_delay_update": 1
-        }
-    }
+	"Video": {
+		"Presets": {
+			"enc_default_bframe_count": 1,
+			"enc_max_mbs_per_sec": 2073600
+		}
+	}
 }
